@@ -116,19 +116,7 @@ p2.target.y = 0;
         p1.pos.y += p1.speed;
 
         //p2 pos
-        Vector2 p2LastPos{};
-        p2LastPos.y = p2.pos.y;
-        if((p2.pos.y <= (windowsDimension[1]-p2.pos.height))&&(p2.pos.y >= 0 + p2.pos.height))
-        {
-            p2.pos.y = ball.pos.y - p2.pos.height/2;
-            p2LastPos.y = p2.pos.y;
-        }
-        else
-        {
-            p2.pos.y = p2LastPos.y;
-            if((ball.pos.y > p2LastPos.y)||(ball.pos.y<windowsDimension[1]-p2.pos.height))
-            p2.pos.y = ball.pos.y; 
-        }
+        p2.pos.y = ball.pos.y - p2.pos.height/2;
         /* p2 movement
         if(IsKeyDown(KEY_W) && p2.pos.y > 0)
         p2.pos.y -= p2.speed;
